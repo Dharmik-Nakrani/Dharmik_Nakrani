@@ -1,9 +1,3 @@
-/**
-* Template Name: iPortfolio - v3.6.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -198,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/hero-g.jpg") top center;
   background-size: cover;
 }
 #hero:before {
@@ -470,7 +464,7 @@ section {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
@@ -489,6 +483,8 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  height: 250px;
+  width: 300px;
 }
 .portfolio .portfolio-wrap::before {
   content: "";
@@ -515,7 +511,7 @@ section {
 }
 .portfolio .portfolio-wrap .portfolio-links a {
   color: #fff;
-  font-size: 22px;
+  font-size: 16px;
   text-align: center;
   background: rgba(20, 157, 221, 0.75);
   transition: 0.3s;
