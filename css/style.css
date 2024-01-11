@@ -580,6 +580,174 @@ h6 {
 
 
 /*--------------------------------------------------------------
+# Certification
+--------------------------------------------------------------*/
+#certification {
+  background: var(--blur-bg-dark), url("../img/subscribe-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 80px 0 60px 0;
+}
+
+#certification .certificate-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#certification .certificate-icon {
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border: 2px var(--section-title);
+  padding: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#certification .certificate-item .certificate-icon:hover {
+  transform: scale(1.5);
+}
+
+/*--------------------------------------------------------------
+# Testimonial
+--------------------------------------------------------------*/
+
+#testimonials {
+  background: var(--bg-dark);
+  padding: 80px 0;
+}
+
+#testimonials .profile {
+  text-align: center;
+}
+
+#testimonials .profile .pic {
+  border-radius: 50%;
+  border: 3px solid var(--section-title);
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 260px;
+  width: 260px;
+}
+
+#testimonials .profile .pic img {
+  max-width: 100%;
+}
+
+#testimonials .profile h4 {
+  font-weight: 700;
+  color: var(--link);
+  margin-bottom: 5px;
+}
+
+#testimonials .profile span {
+  color: var(--section-description);
+}
+
+#testimonials .quote {
+  position: relative;
+  background: var(--bg-dark);
+  padding: 60px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+#testimonials .quote b {
+  display: inline-block;
+  font-size: 22px;
+  left: -9px;
+  position: relative;
+  top: -8px;
+}
+
+#testimonials .quote small {
+  display: inline-block;
+  right: -9px;
+  position: relative;
+  top: 4px;
+}
+
+@media (max-width: 992px) {
+  #testimonials .profile .pic {
+    margin: auto;
+  }
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+
+#team {
+  background: var(--blur-bg-dark), url("../img/subscribe-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 80px 0 60px 0;
+}
+
+
+#team .team-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#team .profile {
+  position: relative;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+
+#team .profile:hover {
+  transform: translateY(25px);
+}
+
+#team .profile img {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 3px solid #f7f7f7;
+  filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+}
+
+#team .profile .name {
+  position: absolute;
+  background-color: var(--background-color);
+  color: var(--section-title);
+  font-family: var(--subtitle-font-family);
+  padding: 5px 15px;
+  border-radius: 100px;
+  bottom: -40px;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -50px);
+  letter-spacing: 1px;
+  font-size: var(--content-font-size);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#team .profile .name::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--background-color);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#team .profile img:hover+.name {
+  opacity: 1;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+}
+
+
+/*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 
