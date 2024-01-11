@@ -762,6 +762,137 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Projects
+--------------------------------------------------------------*/
+#Projects {
+  background: var(--bg-dark);
+  padding: 80px 0;
+}
+
+#news-slider {
+  margin-top: 80px;
+}
+
+#Projects .post-slide {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+#Projects .post-slide .post-img {
+  height: 200px;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e7e7e780;
+  display: flex;
+  border-radius: 15px;
+  justify-content: center;
+
+}
+
+#Projects .post-slide .post-img img {
+  width: 200px;
+  object-fit: contain;
+  transform: scale(1, 1);
+  transition: transform 0.2s linear;
+  border-radius: 5px 5px 0 0;
+}
+
+#Projects .post-slide:hover .post-img img {
+  transform: scale(1.1, 1.1);
+}
+
+#Projects .post-slide .post-content {
+  padding: 2px 20px 40px;
+  border-radius: 15px;
+  height: 250px;
+}
+
+#Projects .post-slide .post-title a {
+  font-size: var(--subtitle-font-size);
+  font-family: var(--subtitle-font-family);
+  font-weight: bold;
+  color: var(--section-title);
+  display: inline-block;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+#Projects .post-slide .post-title a:hover {
+  text-decoration: none;
+  color: var(--link);
+}
+
+#Projects .post-slide .post-description {
+  line-height: 24px;
+  color: var(--section-description);
+  margin-bottom: 25px;
+  font-size: var(--content-font-size);
+  font-family: var(--content-font-family);
+}
+
+#Projects .owl-controls .owl-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#Projects .owl-controls .owl-buttons .owl-prev {
+  background: var(--section-title);
+  position: absolute;
+  top: -13%;
+  left: 15px;
+  padding: 0 18px 0 15px;
+  border-radius: 50px;
+  box-shadow: 3px 14px 25px -10px #89c7fa;
+  transition: background 0.5s ease 0s;
+  display: none;
+}
+
+#Projects .owl-controls .owl-buttons .owl-next {
+  background: var(--section-title);
+  position: absolute;
+  top: -13%;
+  right: 15px;
+  padding: 0 15px 0 18px;
+  border-radius: 50px;
+  box-shadow: -3px 14px 25px -10px #92b4d0;
+  display: none;
+  transition: background 0.5s ease 0s;
+}
+
+#Projects .owl-controls .owl-buttons .owl-prev:after,
+#Projects .owl-controls .owl-buttons .owl-next:after {
+  content: "\f104";
+  font-family: FontAwesome;
+  color: #333;
+  font-size: 30px;
+  display: none;
+}
+
+#Projects .owl-controls .owl-buttons .owl-next:after {
+  content: "\f105";
+  display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  .post-slide .post-content {
+    padding: 0px 15px 25px 15px;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 #contact {
