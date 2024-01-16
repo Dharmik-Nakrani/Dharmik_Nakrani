@@ -317,6 +317,7 @@ h6 {
   padding-bottom: 30px;
 }
 
+
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
@@ -345,7 +346,7 @@ h6 {
 # About
 --------------------------------------------------------------*/
 #about {
-  padding: 80px 0;
+  padding: 80px 10px 80px 300px;
 }
 
 #about .about-img {
@@ -442,7 +443,7 @@ h6 {
 #skills {
   background: var(--blur-bg-dark), url("../img/services-bg.jpg") fixed;
   background-size: cover;
-  padding: 80px 0 60px 0;
+  padding: 80px 10px 80px 300px;
 }
 
 .nav-tab_sec .nav-tabs .nav-link.active {
@@ -487,7 +488,7 @@ h6 {
 # Resume
 --------------------------------------------------------------*/
 #eduex {
-  padding: 80px 0 60px 0;
+  padding: 80px 10px 80px 300px;
 }
 
 #eduex .resume .resume-details {
@@ -585,7 +586,7 @@ h6 {
 #certification {
   background: var(--blur-bg-dark), url("../img/subscribe-bg.jpg") fixed center center;
   background-size: cover;
-  padding: 80px 0 60px 0;
+  padding: 80px 10px 80px 300px;
 }
 
 #certification .certificate-item {
@@ -614,7 +615,7 @@ h6 {
 
 #testimonials {
   background: var(--bg-dark);
-  padding: 80px 0;
+  padding: 80px 10px 80px 300px;
 }
 
 #testimonials .profile {
@@ -682,7 +683,7 @@ h6 {
 #team {
   background: var(--blur-bg-dark), url("../img/subscribe-bg.jpg") fixed center center;
   background-size: cover;
-  padding: 80px 0 60px 0;
+  padding: 80px 10px 80px 300px;
 }
 
 
@@ -766,7 +767,7 @@ h6 {
 --------------------------------------------------------------*/
 #Projects {
   background: var(--bg-dark);
-  padding: 80px 0;
+  padding: 80px 10px 80px 300px;
 }
 
 #news-slider {
@@ -898,7 +899,7 @@ h6 {
 #contact {
   background: var(--blur-bg-dark), url("../img/subscribe-bg.jpg") fixed center center;
   background-size: cover;
-  padding: 80px 0 60px 0;
+  padding: 80px 10px 80px 300px;
 }
 
 #contact .info {
@@ -1072,3 +1073,9 @@ h6 {
   font-size: 20px;
 }
 
+
+@media (max-width: 1199px) {
+  #about,#skills,#eduex,#certification,#testimonials,#team,#Projects,#contact {
+    padding: 80px 0 60px 0;
+  }
+}
