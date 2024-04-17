@@ -99,14 +99,14 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #32373E;
+  background: var(--link-hover);
   overflow-y: auto;
 }
 
 #header .profile img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 170px;
   border: 5px solid var(--theme-color);
 }
 
@@ -269,14 +269,14 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: var(--section-description);
-  font-family: "monospace";
+  font-family: "Jersey 10 Charted";
 }
 
 #hero p {
   color: var(--section-description);
   margin-bottom: 50px;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Condensed" ;
 }
 
 #hero p span {
@@ -482,7 +482,7 @@ h6 {
 #skills .skill-bar:hover img {
   align-items: center;
   cursor: pointer;
-} 
+}
 
 /*--------------------------------------------------------------
 # Resume
@@ -648,7 +648,7 @@ h6 {
 #testimonials .quote {
   position: relative;
   background: var(--bg-dark);
-  padding: 60px;
+  padding: 20px;
   margin-top: 40px;
   font-size: 16px;
   font-style: italic;
@@ -675,6 +675,95 @@ h6 {
     margin: auto;
   }
 }
+
+.carousel {
+  margin: 50px auto;
+  padding: 0 70px;
+}
+
+.carousel-item {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 290px;
+}
+
+.carousel .item .img-box {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.carousel .img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+.carousel .testimonial {
+  padding: 30px 0 10px;
+  color: var(--bs-body-bg);
+}
+
+.carousel .overview {
+  font-style: italic;
+}
+
+.carousel .overview b {
+  text-transform: uppercase;
+  color: #db584e;
+}
+
+.carousel .carousel-control {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  top: 50%;
+  background: none;
+}
+
+.carousel-control i {
+  font-size: 60px;
+  line-height: 10px;
+  position: absolute;
+  display: inline-block;
+  color: var(--background-color);
+}
+
+.carousel .carousel-indicators {
+  bottom: -40px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
+  border-radius: 50%;
+}
+
+.carousel-indicators li {
+  background: #999;
+  border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li.active {
+  background: #555;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev {
+  color: #000;
+  background: #fff;
+}
+
+/* ------testimonial  close-------*/
 
 /*--------------------------------------------------------------
 # Team
@@ -1050,10 +1139,11 @@ h6 {
   .msg {
     width: 100%;
   }
+
   iframe {
     width: 100% !important;
     height: 900px;
-    overflow: unset  !important;
+    overflow: unset !important;
   }
 }
 
@@ -1075,7 +1165,15 @@ h6 {
 
 
 @media (max-width: 1199px) {
-  #about,#skills,#eduex,#certification,#testimonials,#team,#Projects,#contact {
+
+  #about,
+  #skills,
+  #eduex,
+  #certification,
+  #testimonials,
+  #team,
+  #Projects,
+  #contact {
     padding: 80px 0 60px 0;
   }
 }
