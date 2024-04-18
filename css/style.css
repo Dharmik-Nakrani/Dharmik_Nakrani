@@ -144,7 +144,7 @@ h6 {
 }
 
 #header .profile .social-links a:hover {
-  background: var(--link-hover);
+  background: var(--theme-color);
   color: var(--section-description);
   text-decoration: none;
 }
