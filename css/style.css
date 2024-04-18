@@ -22,6 +22,8 @@
   --rating-color-good: #27ae60;
   --rating-color-meh: #f1c40f;
   --rating-color-bad: #e74c3c;
+
+  --progper: 0%
 }
 
 /*--------------------------------------------------------------
@@ -99,7 +101,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: var(--link-hover);
+  background: #212121;
   overflow-y: auto;
 }
 
@@ -276,7 +278,7 @@ h6 {
   color: var(--section-description);
   margin-bottom: 50px;
   font-size: 26px;
-  font-family: "Roboto Condensed" ;
+  font-family: "Roboto Condensed";
 }
 
 #hero p span {
@@ -340,6 +342,7 @@ h6 {
 
 .section-title p {
   margin-bottom: 0;
+  text-align: justify;
 }
 
 /*--------------------------------------------------------------
@@ -482,6 +485,47 @@ h6 {
 #skills .skill-bar:hover img {
   align-items: center;
   cursor: pointer;
+  box-shadow: 2px 2px 20px #fff;
+}
+
+#skills .skill-bar:hover img {
+  opacity: 0.3;
+}
+
+#skills .skill-bar:hover .circular-progress {
+  opacity: 1;
+}
+
+.circular-progress {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 10% 25%;
+  line-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(#0080ff var(--progper), #ededed var(--progper));
+
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progress-value {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: #0080ff;
 }
 
 /*--------------------------------------------------------------
