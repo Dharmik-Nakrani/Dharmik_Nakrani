@@ -278,7 +278,7 @@ h6 {
   color: var(--section-description);
   margin-bottom: 50px;
   font-size: 26px;
-  font-family: "Roboto Condensed";
+  font-family: 'Lucida Sans';
 }
 
 #hero p span {
@@ -400,13 +400,13 @@ h6 {
 
 #about .content2 {
   margin-top: 60px;
+  text-align: center;
 }
 
 .section-title-line {
-  width: 300px;
   height: 3px;
   background: var(--section-title);
-  margin: 30px 0px;
+  margin: 30px 100px;
 }
 
 .box {
