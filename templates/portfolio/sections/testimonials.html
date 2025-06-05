@@ -1,0 +1,20 @@
+<section id="testimonials" class="testimonials section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <p>What clients and colleagues say about working with me</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper init-swiper">
+      {% include 'portfolio/partials/swiper_config.html' %}
+      <div class="swiper-wrapper">
+        {% for testimonial in testimonials %}
+        {% include 'portfolio/partials/testimonial_item.html' %}
+        {% empty %}
+        {% include 'portfolio/partials/default_testimonial.html' %}
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<section id="services" class="services section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+    <p>Professional services I offer to help bring your ideas to life with cutting-edge technology solutions.</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+      {% for service in services %}
+      {% include 'portfolio/partials/service_item.html' %}
+      {% empty %}
+      {% include 'portfolio/partials/default_services.html' %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

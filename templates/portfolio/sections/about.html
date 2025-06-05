@@ -1,0 +1,26 @@
+{% load static %}
+<section id="about" class="about section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About</h2>
+    <p>{{ about.description|default:"Passionate developer with expertise in creating innovative solutions. I love working on challenging projects and continuously learning new technologies." }}</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-center">
+      <div class="col-lg-4">
+        <img src="{% static 'img/my-profile-img.jpg' %}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-8 content">
+        <h2>{{ about.title|default:"Full Stack Developer & Software Engineer" }}</h2>
+        <p class="fst-italic py-3">
+          {{ about.subtitle|default:"Dedicated to creating efficient, scalable, and user-friendly applications using modern technologies and best practices." }}
+        </p>
+        {% include 'portfolio/partials/profile_details.html' %}
+        <p class="py-3">
+          {{ about.detailed_description|default:"I specialize in developing web applications using Django, React, and modern JavaScript frameworks. My goal is to create solutions that not only meet technical requirements but also provide excellent user experiences." }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<h3 class="resume-title">Education</h3>
+{% for education in educations %}
+<div class="resume-item">
+  <h4>{{ education.degree }}</h4>
+  <h5>{{ education.start_year }} - {{ education.end_year }}</h5>
+  <p><em>{{ education.institution }}, {{ education.location }}</em></p>
+  <p>{{ education.description }}</p>
+</div>
+{% empty %}
+<div class="resume-item">
+  <h4>Bachelor of Computer Science & Engineering</h4>
+  <h5>2018 - 2022</h5>
+  <p><em>Mumbai University, Mumbai, India</em></p>
+  <p>Specialized in software engineering and web development. Completed projects in various programming languages and frameworks.</p>
+</div>
+{% endfor %}

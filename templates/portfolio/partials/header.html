@@ -1,0 +1,15 @@
+{% load static %}
+<header id="header" class="header dark-background d-flex flex-column">
+  <i class="header-toggle d-xl-none bi bi-list"></i>
+
+  <div class="profile-img">
+    <img src="{% static 'img/my-profile-img.jpg' %}" alt="" class="img-fluid rounded-circle">
+  </div>
+
+  <a href="{% url 'portfolio:home' %}" class="logo d-flex align-items-center justify-content-center">
+    <h1 class="sitename">{{ profile.name|default:"Dharmik Nakrani" }}</h1>
+  </a>
+
+  {% include 'portfolio/partials/social_links.html' %}
+  {% include 'portfolio/partials/navigation.html' %}
+</header>
