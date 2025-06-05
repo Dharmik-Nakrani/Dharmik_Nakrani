@@ -1,0 +1,7 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  {% for category in skill_categories %}
+  <li class="nav-item" role="presentation">
+    <button class="nav-link {% if forloop.first %}active{% endif %}" id="{{ category.slug }}-tab" data-bs-toggle="tab" data-bs-target="#{{ category.slug }}-tab-pane" type="button" role="tab" aria-controls="{{ category.slug }}-tab-pane" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">{{ category.name }}</button>
+  </li>
+  {% endfor %}
+</ul>

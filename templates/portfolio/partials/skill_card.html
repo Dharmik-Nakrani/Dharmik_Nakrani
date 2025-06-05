@@ -1,0 +1,9 @@
+{% load static %}
+<div class="col-lg-3 col-sm-6 col-md-6 mb-3">
+  <div class="card skill-bar">
+    <img src="{% static skill_image %}" alt="{{ skill_name }}" class="w-100">
+    <div class="circular-progress" style="--progper: {{ skill_percentage }}%;">
+      <span class="progress-value">{{ skill_percentage }}%</span>
+    </div>
+  </div>
+</div>

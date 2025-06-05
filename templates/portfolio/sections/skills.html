@@ -5,13 +5,7 @@
   </div>
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row skills-content skills-animation">
-      <div class="col-lg-6">
-        {% include 'portfolio/partials/skills_column.html' with skills=skills_left column_type='left' %}
-      </div>
-      <div class="col-lg-6">
-        {% include 'portfolio/partials/skills_column.html' with skills=skills_right column_type='right' %}
-      </div>
-    </div>
+    {% include 'portfolio/partials/skills_tabs.html' %}
+    {% include 'portfolio/partials/skills_tab_content.html' %}
   </div>
 </section>

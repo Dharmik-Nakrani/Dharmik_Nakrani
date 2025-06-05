@@ -1,0 +1,16 @@
+<section id="skills" class="skills section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+    <p>My technical expertise and proficiency levels in various technologies</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    {% if skill_categories %}
+      {% include 'portfolio/partials/skills_tabs_dynamic.html' %}
+      {% include 'portfolio/partials/skills_tab_content_dynamic.html' %}
+    {% else %}
+      {% include 'portfolio/partials/skills_tabs.html' %}
+      {% include 'portfolio/partials/skills_tab_content.html' %}
+    {% endif %}
+  </div>
+</section>

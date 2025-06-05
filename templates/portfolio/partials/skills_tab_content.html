@@ -1,0 +1,64 @@
+{% load static %}
+<div class="tab-content" id="myTabContent">
+  <!-- DevOps Tab -->
+  <div class="tab-pane fade show active" id="devops-tab-pane" role="tabpanel" aria-labelledby="devops-tab" tabindex="0">
+    <div class="row mt-4">
+      {% include 'portfolio/partials/skill_card.html' with skill_name="AWS" skill_image="img/skills/AWS.png" skill_percentage="70" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Azure" skill_image="img/skills/Azure.png" skill_percentage="50" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Terraform" skill_image="img/skills/Terraform.png" skill_percentage="90" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Kubernetes" skill_image="img/skills/Kubernetes.png" skill_percentage="70" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="GCP" skill_image="img/skills/GCP.png" skill_percentage="50" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Digital Ocean" skill_image="img/skills/Digital Ocean.png" skill_percentage="65" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Helm" skill_image="img/skills/Helm.png" skill_percentage="70" %}
+    </div>
+  </div>
+
+  <!-- Monitoring Tab -->
+  <div class="tab-pane fade" id="monitoring-tab-pane" role="tabpanel" aria-labelledby="monitoring-tab" tabindex="0">
+    <div class="row mt-4">
+      {% include 'portfolio/partials/skill_card.html' with skill_name="DataDog" skill_image="img/skills/DataDog.png" skill_percentage="35" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="ELK" skill_image="img/skills/ELK.png" skill_percentage="50" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Grafana" skill_image="img/skills/Grafana.png" skill_percentage="90" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Prometheus" skill_image="img/skills/Prometheus.png" skill_percentage="85" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Loki" skill_image="img/skills/Loki.png" skill_percentage="85" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Rancher" skill_image="img/skills/Rancher.png" skill_percentage="70" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Kibana" skill_image="img/skills/Kibana.png" skill_percentage="50" %}
+    </div>
+  </div>
+
+  <!-- Tools Tab -->
+  <div class="tab-pane fade" id="tools-tab-pane" role="tabpanel" aria-labelledby="tools-tab" tabindex="0">
+    <div class="row mt-4">
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Jenkins" skill_image="img/skills/Jenkins.png" skill_percentage="95" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Apache" skill_image="img/skills/Apache.png" skill_percentage="80" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Nginx" skill_image="img/skills/Nginx.png" skill_percentage="80" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Bitbucket" skill_image="img/skills/Bitbucket.png" skill_percentage="90" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Gitea" skill_image="img/skills/Gitea.png" skill_percentage="95" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Github" skill_image="img/skills/Github.png" skill_percentage="90" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Gitlab" skill_image="img/skills/Gitlab.png" skill_percentage="80" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="CircleCI" skill_image="img/skills/CircleCI.png" skill_percentage="60" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Sonarqube" skill_image="img/skills/Sonarqube.png" skill_percentage="55" %}
+    </div>
+  </div>
+
+  <!-- Database Tab -->
+  <div class="tab-pane fade" id="database-tab-pane" role="tabpanel" aria-labelledby="database-tab" tabindex="0">
+    <div class="row mt-4">
+      {% include 'portfolio/partials/skill_card.html' with skill_name="MySQL" skill_image="img/skills/Mysql.png" skill_percentage="70" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="PostgreSQL" skill_image="img/skills/PostgreSQL.png" skill_percentage="60" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="MongoDB" skill_image="img/skills/MongoDB.png" skill_percentage="55" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Firebase" skill_image="img/skills/Firebase.png" skill_percentage="80" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Supabase" skill_image="img/skills/Supabase.png" skill_percentage="70" %}
+    </div>
+  </div>
+
+  <!-- Programming Tab -->
+  <div class="tab-pane fade" id="programming-tab-pane" role="tabpanel" aria-labelledby="programming-tab" tabindex="0">
+    <div class="row mt-4">
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Python" skill_image="img/skills/Python.png" skill_percentage="60" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Flutter" skill_image="img/skills/Flutter.png" skill_percentage="70" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Bash" skill_image="img/skills/Bash.png" skill_percentage="95" %}
+      {% include 'portfolio/partials/skill_card.html' with skill_name="Groovy" skill_image="img/skills/Groovy.png" skill_percentage="85" %}
+    </div>
+  </div>
+</div>
