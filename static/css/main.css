@@ -685,7 +685,6 @@ section,
 # Skills Section
 --------------------------------------------------------------*/
 #skills {
-  background: var(--blur-bg-dark), url("../img/services-bg.jpg") fixed;
   background-size: cover;
 }
 
