@@ -1,54 +1,48 @@
 /**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Template Name: iPortfolio (Modified Black & Blue Theme)
 */
 
 /*--------------------------------------------------------------
 # Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Black & Blue Theme Colors */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --background-color: #10131a; /* Deep black-blue background */
+  --surface-color: #181d29;    /* Slightly lighter for cards/boxes */
+  --default-color: #e5e9f0;    /* Light text */
+  --heading-color: #7ecbff;    /* Blue for headings */
+  --accent-color: #2196f3;     /* Vibrant blue for accents */
+  --contrast-color: #ffffff;   /* For text on blue/black */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Nav Menu Colors */
+:root {
+  --nav-color: #7ecbff;  /* Blue nav links */
+  --nav-hover-color: #ffffff; /* White on hover */
+  --nav-mobile-background-color: #10131a;
+  --nav-dropdown-background-color: #181d29;
+  --nav-dropdown-color: #7ecbff;
+  --nav-dropdown-hover-color: #2196f3;
+}
 
+/* Color Presets */
 .light-background {
-  --background-color: #f4fafd;
-  --surface-color: #ffffff;
+  --background-color: #181d29;
+  --surface-color: #232a3b;
 }
 
 .dark-background {
-  --background-color: #040b14;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #151f2b;
+  --background-color: #10131a;
+  --default-color: #e5e9f0;
+  --heading-color: #7ecbff;
+  --surface-color: #181d29;
   --contrast-color: #ffffff;
 }
 
@@ -73,26 +67,20 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: #7ecbff;
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
+/* PHP Email Form Messages */
 .php-email-form .error-message {
   display: none;
-  background: #df1529;
-  color: #ffffff;
+  background: #e53935;
+  color: #fff;
   text-align: left;
   padding: 15px;
   margin-bottom: 24px;
@@ -101,8 +89,8 @@ h6 {
 
 .php-email-form .sent-message {
   display: none;
-  color: #ffffff;
-  background: #059652;
+  color: #fff;
+  background: #2196f3;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -130,13 +118,8 @@ h6 {
 }
 
 @keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
 
 /*--------------------------------------------------------------
@@ -154,14 +137,14 @@ h6 {
   transition: all ease-in-out 0.3s;
   overflow-y: auto;
   z-index: 997;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-right: 1px solid #232a3b;
 }
 
 .header .profile-img img {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 8px solid #232a3b;
 }
 
 .header .logo {
@@ -190,7 +173,7 @@ h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: #232a3b;
   color: var(--default-color);
   margin: 0 2px;
   border-radius: 50%;
@@ -206,7 +189,6 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-
   .header~main,
   .header~#footer {
     margin-left: 300px;
@@ -243,7 +225,7 @@ h6 {
 
 .header .header-toggle:hover {
   color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+  background-color: #1565c0;
 }
 
 /*--------------------------------------------------------------
@@ -297,7 +279,7 @@ h6 {
   border-radius: 50%;
   transition: 0.3s;
   flex-shrink: 0;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: #232a3b;
 }
 
 .navmenu a .toggle-dropdown:hover,
@@ -331,7 +313,7 @@ h6 {
 
 .navmenu .dropdown a,
 .navmenu .dropdown a:focus {
-  color: --nav-dropdown-color;
+  color: var(--nav-dropdown-color);
 }
 
 .navmenu .dropdown a:hover,
@@ -347,18 +329,18 @@ h6 {
   padding: 5px 10px;
   margin: 5px 10px;
   background-color: var(--nav-dropdown-background-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid #232a3b;
   box-shadow: none;
   transition: all 0.5s ease-in-out;
 }
 
 .navmenu .dropdown ul ul {
-  background-color: rgba(33, 37, 41, 0.1);
+  background-color: #181d29;
 }
 
 .navmenu .dropdown>.dropdown-active {
   display: block;
-  background-color: rgba(33, 37, 41, 0.03);
+  background-color: #181d29;
 }
 
 /*--------------------------------------------------------------
@@ -370,7 +352,7 @@ h6 {
   font-size: 14px;
   padding: 40px 0;
   position: relative;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid #232a3b;
 }
 
 .footer .copyright p {
@@ -400,7 +382,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ffffff;
+  border: 6px solid #232a3b;
   border-color: var(--accent-color) transparent var(--accent-color) transparent;
   border-radius: 50%;
   width: 60px;
@@ -409,13 +391,8 @@ h6 {
 }
 
 @keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
 
 /*--------------------------------------------------------------
@@ -442,7 +419,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: #1565c0;
   color: var(--contrast-color);
 }
 
@@ -494,7 +471,7 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: #232a3b;
 }
 
 /*--------------------------------------------------------------
@@ -560,11 +537,12 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  opacity: 0.15;
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: rgba(16, 19, 26, 0.7);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -579,6 +557,7 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: var(--heading-color);
 }
 
 .hero p {
@@ -598,7 +577,7 @@ section,
 .hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: #7ecbff;
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -609,13 +588,8 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 20px;
-  }
+  .hero h2 { font-size: 32px; }
+  .hero p { font-size: 20px; }
 }
 
 /*--------------------------------------------------------------
@@ -674,7 +648,7 @@ section,
 }
 
 .stats .stats-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: #7ecbff;
   padding: 15px 0 0 0;
   margin: 0 0 0 60px;
   font-family: var(--heading-font);
@@ -691,15 +665,17 @@ section,
 .nav-tab_sec .nav-tabs .nav-link.active {
   border-color: unset;
   font-weight: 600;
+  color: var(--accent-color);
 }
 
 .nav-tab_sec .nav-tabs .nav-link:hover {
   border-color: unset;
   border: 0;
+  color: var(--heading-color);
 }
 
 .nav-tab_sec .nav-link {
-  color: var(--section-description);
+  color: #7ecbff;
   padding: 0.5rem 60px;
 }
 
@@ -708,7 +684,7 @@ section,
 }
 
 .nav-tab_sec .nav-tabs {
-  border-bottom: 3px solid var(--section-description);
+  border-bottom: 3px solid #232a3b;
 }
 
 .nav-tabs .nav-link {
@@ -724,7 +700,7 @@ section,
 #skills .skill-bar:hover img {
   align-items: center;
   cursor: pointer;
-  box-shadow: 2px 2px 20px #fff;
+  box-shadow: 2px 2px 20px #2196f3;
 }
 
 #skills .skill-bar:hover img {
@@ -745,8 +721,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: conic-gradient(#0080ff var(--progper), #ededed var(--progper));
-
+  background: conic-gradient(#2196f3 var(--progper), #232a3b var(--progper));
   opacity: 0;
   transition: .5s ease;
 }
@@ -754,17 +729,20 @@ section,
 .circular-progress::before {
   content: "";
   position: absolute;
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  background-color: white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
 }
 
 .progress-value {
   position: relative;
   font-size: 40px;
   font-weight: 600;
-  color: #0080ff;
+  color: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------
@@ -790,7 +768,7 @@ section,
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #7ecbff;
   margin-bottom: 10px;
 }
 
@@ -800,6 +778,8 @@ section,
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  background: #181d29;
+  color: var(--accent-color);
 }
 
 .resume .resume-item ul {
@@ -847,6 +827,7 @@ section,
   text-transform: uppercase;
   margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
+  color: #7ecbff;
 }
 
 .portfolio .portfolio-filters li:hover,
@@ -872,6 +853,8 @@ section,
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
+  background: var(--surface-color);
+  border-radius: 8px;
 }
 
 .portfolio .portfolio-content img {
@@ -884,7 +867,7 @@ section,
   inset: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(16, 19, 26, 0.85);
   padding: 15px;
 }
 
@@ -906,7 +889,7 @@ section,
   right: 0;
   font-size: 16px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: #7ecbff;
 }
 
 .portfolio .portfolio-content .portfolio-info .preview-link,
@@ -944,6 +927,9 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   position: relative;
+  background: var(--surface-color);
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .services .service-item .icon {
@@ -1016,17 +1002,18 @@ section,
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
+  color: var(--heading-color);
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #7ecbff;
   margin: 0;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 40%);
+  color: #2196f3;
   font-size: 26px;
   line-height: 0;
 }
@@ -1053,7 +1040,8 @@ section,
   position: relative;
   margin-bottom: 35px;
   border-radius: 6px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(33, 150, 243, 0.07);
+  color: var(--default-color);
 }
 
 .testimonials .testimonial-item p::after {
@@ -1080,7 +1068,7 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: var(--background-color);
+  background-color: #232a3b;
   opacity: 1;
   border: 1px solid var(--accent-color);
 }
@@ -1094,8 +1082,9 @@ section,
 --------------------------------------------------------------*/
 .contact .info-wrap {
   background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(33, 150, 243, 0.05);
   padding: 30px;
+  border-radius: 8px;
 }
 
 @media (max-width: 575px) {
@@ -1111,7 +1100,7 @@ section,
 .contact .info-item i {
   font-size: 20px;
   color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  background: #232a3b;
   width: 44px;
   height: 44px;
   display: flex;
@@ -1127,6 +1116,7 @@ section,
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
+  color: var(--heading-color);
 }
 
 .contact .info-item p {
@@ -1144,7 +1134,8 @@ section,
   background-color: var(--surface-color);
   height: 100%;
   padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(33, 150, 243, 0.05);
+  border-radius: 8px;
 }
 
 @media (max-width: 575px) {
@@ -1162,7 +1153,7 @@ section,
   border-radius: 0;
   color: var(--default-color);
   background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-color: #232a3b;
 }
 
 .contact .php-email-form input[type=text]:focus,
@@ -1174,7 +1165,7 @@ section,
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: #7ecbff;
 }
 
 .contact .php-email-form button[type=submit] {
@@ -1187,7 +1178,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: #1565c0;
 }
 
 /*--------------------------------------------------------------
@@ -1205,7 +1196,7 @@ section,
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: #232a3b;
   opacity: 1;
 }
 
@@ -1215,7 +1206,9 @@ section,
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 30px rgba(33, 150, 243, 0.07);
+  background: var(--surface-color);
+  border-radius: 8px;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1223,7 +1216,8 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px solid #232a3b;
+  color: var(--heading-color);
 }
 
 .portfolio-details .portfolio-info ul {
@@ -1244,11 +1238,12 @@ section,
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: var(--heading-color);
 }
 
 .portfolio-details .portfolio-description p {
   padding: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #7ecbff;
 }
 
 /*--------------------------------------------------------------
@@ -1256,17 +1251,19 @@ section,
 --------------------------------------------------------------*/
 .service-details .services-list {
   padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid #232a3b;
   margin-bottom: 20px;
+  background: var(--surface-color);
+  border-radius: 8px;
 }
 
 .service-details .services-list a {
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  border-left: 3px solid #232a3b;
   margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #7ecbff;
   transition: 0.3s;
 }
 
@@ -1287,15 +1284,18 @@ section,
 .service-details h3 {
   font-size: 26px;
   font-weight: 700;
+  color: var(--heading-color);
 }
 
 .service-details h4 {
   font-size: 20px;
   font-weight: 700;
+  color: var(--accent-color);
 }
 
 .service-details p {
   font-size: 15px;
+  color: var(--default-color);
 }
 
 .service-details ul {
