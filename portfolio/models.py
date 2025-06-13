@@ -28,7 +28,6 @@ class Profile(models.Model):
 
 class About(models.Model):
     title = models.CharField(max_length=200)
-    subtitle = models.CharField(max_length=200)
     description = models.TextField()
     detailed_description = models.TextField()
     profile_image = models.ImageField(upload_to='profile/', blank=True)

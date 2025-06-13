@@ -33,7 +33,8 @@ def get_fallback_context():
             'description': 'Passionate software engineer with expertise in modern web technologies, cloud platforms, and automation.',
             'title': 'Full Stack Developer & DevOps Specialist',
             'subtitle': 'Dedicated to creating efficient, scalable, and user-friendly solutions.',
-            'detailed_description': 'I specialize in full-stack development, cloud infrastructure, and DevOps practices using cutting-edge technologies. My goal is to deliver high-quality solutions that exceed expectations.'
+            'detailed_description': 'I specialize in full-stack development, cloud infrastructure, and DevOps practices using cutting-edge technologies. My goal is to deliver high-quality solutions that exceed expectations.',
+            'image': 'https://linkedin.com/in/johndeveloper'
         },
         'stats': {
             'happy_clients': 30,
@@ -224,8 +225,8 @@ def home(request):
             'about': {
                 'description': about.description if about else '',
                 'title': about.title if about else '',
-                'subtitle': about.subtitle if about else '',
                 'detailed_description': about.detailed_description if about else '',
+                'image': about.profile_image if about else '',
             } if about else {},
             'stats': {
                 'happy_clients': stats.happy_clients if stats else 0,
