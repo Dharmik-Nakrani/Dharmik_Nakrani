@@ -31,7 +31,7 @@ class Command(BaseCommand):
         about, created = About.objects.get_or_create(
             title='DevOps Engineer & Cloud Specialist',
             defaults={
-                'subtitle': 'Dedicated to creating efficient, scalable, and reliable infrastructure solutions.',
+                'profile_image': '/img/profile.jpg',
                 'description': 'Passionate DevOps engineer with expertise in cloud technologies, automation, and modern infrastructure management.',
                 'detailed_description': 'I specialize in DevOps practices, cloud infrastructure, and automation using modern tools and technologies. My goal is to create solutions that not only meet technical requirements but also provide excellent scalability and reliability.'
             }
