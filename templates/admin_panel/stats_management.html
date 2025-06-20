@@ -1,0 +1,46 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}Statistics Management - Portfolio Admin{% endblock %}
+{% block page_title %}Statistics Management{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Portfolio Statistics</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.happy_clients.id_for_label }}" class="form-label">Happy Clients</label>
+                            {{ form.happy_clients }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.projects.id_for_label }}" class="form-label">Projects Completed</label>
+                            {{ form.projects }}
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.support_hours.id_for_label }}" class="form-label">Support Hours</label>
+                            {{ form.support_hours }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.team_members.id_for_label }}" class="form-label">Team Members</label>
+                            {{ form.team_members }}
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-2"></i>Update Statistics
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

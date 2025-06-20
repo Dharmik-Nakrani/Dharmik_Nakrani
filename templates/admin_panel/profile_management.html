@@ -1,0 +1,98 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}Profile Management - Portfolio Admin{% endblock %}
+{% block page_title %}Profile Management{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Personal Information</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.name.id_for_label }}" class="form-label">Full Name</label>
+                            {{ form.name }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.email.id_for_label }}" class="form-label">Email</label>
+                            {{ form.email }}
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.phone.id_for_label }}" class="form-label">Phone</label>
+                            {{ form.phone }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.city.id_for_label }}" class="form-label">City</label>
+                            {{ form.city }}
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.address.id_for_label }}" class="form-label">Address</label>
+                        {{ form.address }}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.typed_items.id_for_label }}" class="form-label">Typed Items (comma separated)</label>
+                        {{ form.typed_items }}
+                        <div class="form-text">These will appear in the typing animation on your homepage</div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.website.id_for_label }}" class="form-label">Website</label>
+                            {{ form.website }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.freelance_status.id_for_label }}" class="form-label">Freelance Status</label>
+                            {{ form.freelance_status }}
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <h6>Social Media Links</h6>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.linkedin_url.id_for_label }}" class="form-label">LinkedIn URL</label>
+                            {{ form.linkedin_url }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.twitter_url.id_for_label }}" class="form-label">Twitter URL</label>
+                            {{ form.twitter_url }}
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.facebook_url.id_for_label }}" class="form-label">Facebook URL</label>
+                            {{ form.facebook_url }}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.instagram_url.id_for_label }}" class="form-label">Instagram URL</label>
+                            {{ form.instagram_url }}
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.teams_url.id_for_label }}" class="form-label">Teams/Skype URL</label>
+                        {{ form.teams_url }}
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-2"></i>Save Changes
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

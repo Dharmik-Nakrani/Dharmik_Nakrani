@@ -1,0 +1,47 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}About Management - Portfolio Admin{% endblock %}
+{% block page_title %}About Management{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">About Section</h5>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ form.title.id_for_label }}" class="form-label">Title</label>
+                        {{ form.title }}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.profile_image.id_for_label }}" class="form-label">Profile Image</label>
+                        {{ form.profile_image }}
+                        <div class="form-text">Upload a new profile image (optional)</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.description.id_for_label }}" class="form-label">Short Description</label>
+                        {{ form.description }}
+                        <div class="form-text">Brief description for the about section</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.detailed_description.id_for_label }}" class="form-label">Detailed Description</label>
+                        {{ form.detailed_description }}
+                        <div class="form-text">More detailed description about yourself and your work</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-2"></i>Save Changes
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

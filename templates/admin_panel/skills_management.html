@@ -1,0 +1,154 @@
+{% extends 'admin_panel/base.html' %}
+
+{% block title %}Skills Management - Portfolio Admin{% endblock %}
+{% block page_title %}Skills Management{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title">Add New Category</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ category_form.name.id_for_label }}" class="form-label">Category Name</label>
+                        {{ category_form.name }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ category_form.order.id_for_label }}" class="form-label">Display Order</label>
+                        {{ category_form.order }}
+                    </div>
+                    <button type="submit" name="add_category" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Add Category
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Add New Skill</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ skill_form.category.id_for_label }}" class="form-label">Category</label>
+                        {{ skill_form.category }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ skill_form.name.id_for_label }}" class="form-label">Skill Name</label>
+                        {{ skill_form.name }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ skill_form.percentage.id_for_label }}" class="form-label">Proficiency (%)</label>
+                        {{ skill_form.percentage }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ skill_form.order.id_for_label }}" class="form-label">Display Order</label>
+                        {{ skill_form.order }}
+                    </div>
+                    <button type="submit" name="add_skill" class="btn btn-success">
+                        <i class="fas fa-plus me-2"></i>Add Skill
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Current Skills</h5>
+            </div>
+            <div class="card-body">
+                {% for category in categories %}
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="text-primary">{{ category.name }}</h6>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory(category.id)">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        
+                        {% for skill in category.skills.all %}
+                            <div class="row align-items-center mb-2">
+                                <div class="col-md-4">
+                                    <span>{{ skill.name }}</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" 
+                                             style="width: {{ skill.percentage }}%" 
+                                             aria-valuenow="{{ skill.percentage }}" 
+                                             aria-valuemin="0" aria-valuemax="100">
+                                            {{ skill.percentage }}%
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-sm btn-outline-danger" onclick="deleteSkill(skill.id)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <p class="text-muted">No skills in this category yet.</p>
+                        {% endfor %}
+                        <hr>
+                    </div>
+                {% empty %}
+                    <p class="text-muted">No skill categories created yet.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function deleteSkill(skillId) {
+    if (confirm('Are you sure you want to delete this skill?')) {
+        $.ajax({
+            url: `/panel/ajax/delete-skill/${skillId}/`,
+            type: 'DELETE',
+            headers: {
+                'X-CSRFToken': $('[name=csrfmiddlewaretoken]').val()
+            },
+            success: function(response) {
+                if (response.success) {
+                    location.reload();
+                }
+            },
+            error: function() {
+                alert('Error deleting skill');
+            }
+        });
+    }
+}
+
+function deleteCategory(categoryId) {
+    if (confirm('Are you sure you want to delete this category? All skills in this category will also be deleted.')) {
+        $.ajax({
+            url: `/panel/ajax/delete-category/${categoryId}/`,
+            type: 'DELETE',
+            headers: {
+                'X-CSRFToken': $('[name=csrfmiddlewaretoken]').val()
+            },
+            success: function(response) {
+                if (response.success) {
+                    location.reload();
+                }
+            },
+            error: function() {
+                alert('Error deleting category');
+            }
+        });
+    }
+}
+</script>
+{% endblock %}
